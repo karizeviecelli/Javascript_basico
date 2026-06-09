@@ -12,7 +12,6 @@ if (numero1 > numero2) {
 }
 
 // 2//
-
 let valor = parseFloat(prompt("Digite um número: "));
 
 if (valor > 0) {
@@ -23,4 +22,33 @@ if (valor > 0) {
     console.log("O valor é ZERO (neutro).");
 }
 
+//3//
+let entrada = "m";
+let sexo = entrada.toUpperCase();
 
+switch (sexo) {
+    case "F":
+        console.log("F → Feminino");
+        break;
+    case "M":
+        console.log("M → Masculino");
+        break;
+    default:
+        console.log("Sexo inválido");
+}
+
+//4//
+let entrada = "A";
+let letra = entrada.toLowerCase();
+
+switch (letra) {
+    case "a":
+    case "e":
+    case "i":
+    case "o":
+    case "u":
+        console.log(`"${entrada}" é uma vogal.`);
+        break;
+    default:
+        console.log(`"${entrada}" é uma consoante.`);
+}
