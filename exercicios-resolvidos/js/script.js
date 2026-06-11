@@ -207,3 +207,141 @@ console.log(`FGTS (11%)                      : R$ ${valorFGTS.toFixed(2)}`);
 console.log(`Total de descontos              : R$ ${totalDescontos.toFixed(2)}`);
 console.log(`Salário Líquido                 : R$ ${salarioLiquido.toFixed(2)}`);
 console.log("-----------------------------------------");
+
+// 13 //
+let diaNum = parseInt(prompt("Digite um número (1-7) para o dia da semana:"));
+switch (diaNum) {
+    case 1: console.log("Domingo"); break;
+    case 2: console.log("Segunda"); break;
+    case 3: console.log("Terça"); break;
+    case 4: console.log("Quarta"); break;
+    case 5: console.log("Quinta"); break;
+    case 6: console.log("Sexta"); break;
+    case 7: console.log("Sábado"); break;
+    default: console.log("Valor inválido");
+}
+
+// 14 //
+let notaA = parseFloat(prompt("Nota 1:"));
+let notaB = parseFloat(prompt("Nota 2:"));
+let mediaFinal = (notaA + notaB) / 2;
+let conceito = "";
+
+if (mediaFinal >= 9) conceito = "A";
+else if (mediaFinal >= 7.5) conceito = "B";
+else if (mediaFinal >= 6) conceito = "C";
+else if (mediaFinal >= 4) conceito = "D";
+else conceito = "E";
+
+let situacao = (conceito === "A" || conceito === "B" || conceito === "C") ? "APROVADO" : "REPROVADO";
+console.log(`Notas: ${notaA}, ${notaB} | Média: ${mediaFinal} | Conceito: ${conceito} | Status: ${situacao}`);
+
+// 15 //
+let l1 = parseFloat(prompt("Lado 1:"));
+let l2 = parseFloat(prompt("Lado 2:"));
+let l3 = parseFloat(prompt("Lado 3:"));
+
+if (l1 + l2 > l3 && l1 + l3 > l2 && l2 + l3 > l1) {
+    if (l1 === l2 && l2 === l3) console.log("Triângulo Equilátero");
+    else if (l1 === l2 || l1 === l3 || l2 === l3) console.log("Triângulo Isósceles");
+    else console.log("Triângulo Escaleno");
+} else {
+    console.log("Os lados não formam um triângulo.");
+}
+
+// 16 //
+let vA = parseFloat(prompt("Valor de a:"));
+if (vA === 0) {
+    console.log("Não é equação de segundo grau.");
+} else {
+    let vB = parseFloat(prompt("Valor de b:"));
+    let vC = parseFloat(prompt("Valor de c:"));
+    let delta = (vB ** 2) - (4 * vA * vC);
+    if (delta < 0) console.log("Não possui raízes reais.");
+    else if (delta === 0) console.log("Raiz única: " + (-vB / (2 * vA)));
+    else {
+        let r1 = (-vB + Math.sqrt(delta)) / (2 * vA);
+        let r2 = (-vB - Math.sqrt(delta)) / (2 * vA);
+        console.log(`Raízes: ${r1.toFixed(2)} e ${r2.toFixed(2)}`);
+    }
+}
+
+// 17 //
+let ano = parseInt(prompt("Digite um ano:"));
+if ((ano % 4 === 0 && ano % 100 !== 0) || (ano % 400 === 0)) {
+    console.log("É bissexto.");
+} else {
+    console.log("Não é bissexto.");
+}
+
+// 18 //
+let pNum = parseInt(prompt("Número inteiro:"));
+console.log(pNum % 2 === 0 ? "Par" : "Ímpar");
+
+// 19 //
+let caracNum = parseFloat(prompt("Digite um número:"));
+let pOuI = caracNum % 2 === 0 ? "Par" : "Ímpar";
+let posNeg = caracNum >= 0 ? "Positivo" : "Negativo";
+console.log(`O número ${caracNum} é ${pOuI} e ${posNeg}.`);
+
+// 20 //
+let score = 0;
+if (prompt("Telefonou para a vítima? (s/n)").toLowerCase() === "s") score++;
+if (prompt("Esteve no local do crime? (s/n)").toLowerCase() === "s") score++;
+if (prompt("Mora perto da vítima? (s/n)").toLowerCase() === "s") score++;
+if (prompt("Devia para a vítima? (s/n)").toLowerCase() === "s") score++;
+if (prompt("Já trabalhou com a vítima? (s/n)").toLowerCase() === "s") score++;
+
+if (score === 2) console.log("Suspeita");
+else if (score === 3 || score === 4) console.log("Cúmplice");
+else if (score === 5) console.log("Assassino");
+else console.log("Inocente");
+
+// 21 //
+let numA = parseFloat(prompt("Número A:"));
+let numB = parseFloat(prompt("Número B:"));
+console.log(`Maior: ${Math.max(numA, numB)} | Menor: ${Math.min(numA, numB)}`);
+
+// 22 //
+let i1 = parseInt(prompt("Inteiro 1:"));
+let i2 = parseInt(prompt("Inteiro 2:"));
+let i3 = parseInt(prompt("Inteiro 3:"));
+console.log(`Maior: ${Math.max(i1, i2, i3)}, Menor: ${Math.min(i1, i2, i3)}`);
+
+// 23 //
+let cNum = parseInt(prompt("Número para teste Par/Ímpar (Exercício C):"));
+if (cNum % 2 === 0) console.log("Par");
+else console.log("Ímpar");
+
+// 24 //
+let raio = parseFloat(prompt("Raio da circunferência:"));
+console.log(`Diâmetro: ${2 * raio}`);
+console.log(`Comprimento: ${(2 * Math.PI * raio).toFixed(2)}`);
+console.log(`Área: ${(Math.PI * (raio ** 2)).toFixed(2)}`);
+
+// 25 //
+let idadeDoador = parseInt(prompt("Sua idade:"));
+if (idadeDoador >= 18 && idadeDoador <= 67) {
+    console.log("Pode doar sangue.");
+} else {
+    console.log("Não pode doar sangue.");
+}
+
+// 26 //
+let d = parseInt(prompt("Dia:"));
+let m = parseInt(prompt("Mês:"));
+let aValid = parseInt(prompt("Ano:"));
+
+if (aValid !== 2013) console.log("Data inválida: Ano deve ser 2013.");
+else if (m < 1 || m > 12) console.log("Data inválida: Mês inexistente.");
+else if (d < 1 || d > 31) console.log("Data inválida: Dia fora do intervalo (1-31).");
+else console.log(`Data válida: ${d}/${m}/${aValid}`);
+
+// 27 //
+let x = prompt("Valor de x:");
+let y = prompt("Valor de y:");
+console.log(`Antes: x=${x}, y=${y}`);
+let temp = x;
+x = y;
+y = temp;
+console.log(`Depois: x=${x}, y=${y}`);
