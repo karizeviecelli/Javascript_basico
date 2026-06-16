@@ -1,8 +1,7 @@
-
+/* 
 // 1 //
 let numero1 = parseFloat(prompt("Digite o primeiro número: "));
 let numero2 = parseFloat(prompt("Digite o segundo número: "));
-
 
 if (numero1 > numero2) {
     console.log(`O maior número é: ${numero1}`);
@@ -12,7 +11,7 @@ if (numero1 > numero2) {
     console.log("Os dois números são iguais!");
 }
 
-// 2//
+// 2 //
 let valor = parseFloat(prompt("Digite um número: "));
 
 if (valor > 0) {
@@ -23,24 +22,19 @@ if (valor > 0) {
     console.log("O valor é ZERO (neutro).");
 }
 
-//3//
-let entrada = "m";
-let sexo = entrada.toUpperCase();
+// 3 //
+let entradaEx3 = "m"; // Alterado para não dar conflito
+let sexo = entradaEx3.toUpperCase();
 
 switch (sexo) {
-    case "F":
-        console.log("F → Feminino");
-        break;
-    case "M":
-        console.log("M → Masculino");
-        break;
-    default:
-        console.log("Sexo inválido");
+    case "F": console.log("F → Feminino"); break;
+    case "M": console.log("M → Masculino"); break;
+    default: console.log("Sexo inválido");
 }
 
-//4//
-let entrada = "A";
-let letra = entrada.toLowerCase();
+// 4 //
+let entradaEx4 = "A"; // Alterado para não dar conflito
+let letra = entradaEx4.toLowerCase();
 
 switch (letra) {
     case "a":
@@ -48,17 +42,18 @@ switch (letra) {
     case "i":
     case "o":
     case "u":
-        console.log(`"${entrada}" é uma vogal.`);
+        console.log(`"${entradaEx4}" é uma vogal.`);
         break;
     default:
-        console.log(`"${entrada}" é uma consoante.`);
+        console.log(`"${entradaEx4}" é uma consoante.`);
 }
 
-// 5
+// 5 //
 let nota1 = 8.5;
 let nota2 = 7.5;
 let media = (nota1 + nota2) / 2;
 
+console.log(`--- Exercício 5 ---`);
 console.log(`Média do aluno: ${media}`);
 
 if (media === 10) {
@@ -69,10 +64,11 @@ if (media === 10) {
     console.log("Reprovado");
 }
 
+console.log(`\n--- Exercício 6 ---`);
 // 6 //
-let n1 = parseFloat(prompt("Digite o primeiro número: "));
-let n2 = parseFloat(prompt("Digite o segundo número: "));
-let n3 = parseFloat(prompt("Digite o terceiro número: "));
+let n1 = parseFloat(prompt("Digite o primeiro número para o Ex 6: "));
+let n2 = parseFloat(prompt("Digite o segundo número para o Ex 6: "));
+let n3 = parseFloat(prompt("Digite o terceiro número para o Ex 6: "));
 
 if (n1 >= n2 && n1 >= n3) {
     console.log(`O maior número é: ${n1}`);
@@ -81,6 +77,7 @@ if (n1 >= n2 && n1 >= n3) {
 } else {
     console.log(`O maior número é: ${n3}`);
 } 
+
 // 7 //
 let v1 = parseFloat(prompt("Digite o primeiro valor: "));
 let v2 = parseFloat(prompt("Digite o segundo valor: "));
@@ -106,33 +103,17 @@ if (p1 <= p2 && p1 <= p3) {
     console.log(`Você deve comprar o terceiro produto, pois custa R$ ${p3.toFixed(2)}`);
 }
 
-
 // 9 //
-let n1 = 15;
-let n2 = 42;
-let n3 = 23;
-
+let num9_1 = 15; // Alterado o nome para evitar conflito com o Ex 6
+let num9_2 = 42;
+let num9_3 = 23;
 let aux; 
 
-if (n2 > n1) {
-    aux = n1;
-    n1 = n2;
-    n2 = aux;
-}
+if (num9_2 > num9_1) { aux = num9_1; num9_1 = num9_2; num9_2 = aux; }
+if (num9_3 > num9_1) { aux = num9_1; num9_1 = num9_3; num9_3 = aux; }
+if (num9_3 > num9_2) { aux = num9_2; num9_2 = num9_3; num9_3 = aux; }
 
-if (n3 > n1) {
-    aux = n1;
-    n1 = n3;
-    n3 = aux;
-}
-
-if (n3 > n2) {
-    aux = n2;
-    n2 = n3;
-    n3 = aux;
-}
-
-console.log("Ordem decrescente:", n1, n2, n3);
+console.log("Ordem decrescente:", num9_1, num9_2, num9_3);
 
 // 10 //
 let turno = prompt("Em que turno você estuda? Digite M-Matutino, V-Vespertino ou N-Noturno: ").toUpperCase();
@@ -169,7 +150,7 @@ console.log(`Percentual aplicado: ${percentual}%`);
 console.log(`Valor do aumento: R$ ${valorDoAumento.toFixed(2)}`);
 console.log(`Novo salário: R$ ${novoSalario.toFixed(2)}`);
 
-// 12 usei ia//
+// 12 //
 let valorHora = parseFloat(prompt("Informe o valor da sua hora trabalhada: "));
 let horasMes = parseFloat(prompt("Informe a quantidade de horas trabalhadas no mês: "));
 
@@ -207,20 +188,24 @@ console.log(`FGTS (11%)                      : R$ ${valorFGTS.toFixed(2)}`);
 console.log(`Total de descontos              : R$ ${totalDescontos.toFixed(2)}`);
 console.log(`Salário Líquido                 : R$ ${salarioLiquido.toFixed(2)}`);
 console.log("-----------------------------------------");
+*/
 
-// 13 //
-let diaNum = parseInt(prompt("Digite um número (1-7) para o dia da semana:"));
+
+// questao 13, dia correspondente da semana 1 a 7//
+let diaNum = parseInt(prompt("digite um número (1-7) para o dia da semana:"));
 switch (diaNum) {
-    case 1: console.log("Domingo"); break;
-    case 2: console.log("Segunda"); break;
-    case 3: console.log("Terça"); break;
-    case 4: console.log("Quarta"); break;
-    case 5: console.log("Quinta"); break;
-    case 6: console.log("Sexta"); break;
-    case 7: console.log("Sábado"); break;
-    default: console.log("Valor inválido");
+    case 1: console.log("domingo"); break;
+    case 2: console.log("segunda"); break;
+    case 3: console.log("terça"); break;
+    case 4: console.log("quarta"); break;
+    case 5: console.log("1uinta"); break;
+    case 6: console.log("sexta"); break;
+    case 7: console.log("sábado"); break;
+    default: console.log("valor inválido");
 }
 
+
+/*
 // 14 //
 let notaA = parseFloat(prompt("Nota 1:"));
 let notaB = parseFloat(prompt("Nota 2:"));
@@ -326,22 +311,4 @@ if (idadeDoador >= 18 && idadeDoador <= 67) {
 } else {
     console.log("Não pode doar sangue.");
 }
-
-// 26 //
-let d = parseInt(prompt("Dia:"));
-let m = parseInt(prompt("Mês:"));
-let aValid = parseInt(prompt("Ano:"));
-
-if (aValid !== 2013) console.log("Data inválida: Ano deve ser 2013.");
-else if (m < 1 || m > 12) console.log("Data inválida: Mês inexistente.");
-else if (d < 1 || d > 31) console.log("Data inválida: Dia fora do intervalo (1-31).");
-else console.log(`Data válida: ${d}/${m}/${aValid}`);
-
-// 27 //
-let x = prompt("Valor de x:");
-let y = prompt("Valor de y:");
-console.log(`Antes: x=${x}, y=${y}`);
-let temp = x;
-x = y;
-y = temp;
-console.log(`Depois: x=${x}, y=${y}`);
+*/
