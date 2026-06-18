@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aula 4 - Prática</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+.topbar { display: flex; align-items: center; justify-content: space-between; background: #333; color: white; padding: 10px 20px; border-radius: 8px; margin-bottom: 10px; }
+.topbar h1 { font-size: 1.2em; }
+.timer { display: flex; align-items: center; gap: 8px; }
+.timer button { background: none; border: none; color: white; font-size: 1.2em; cursor: pointer; }
+.progress-bar { background: #ddd; height: 10px; border-radius: 5px; margin-bottom: 20px; }
+.progress { background: #4CAF50; height: 100%; width: 0%; border-radius: 5px; transition: width 0.3s; }
+.card { background: white; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); overflow: hidden; }
+.card-header { display: flex; align-items: center; padding: 15px; cursor: pointer; background: #f9f9f9; border-bottom: 1px solid #eee; }
+.card-header input[type="checkbox"] { margin-right: 15px; transform: scale(1.2); }
+.card-header .step-title { flex: 1; }
+.card-header .expand-btn { background: none; border: none; font-size: 1.2em; cursor: pointer; }
+.card-body { padding: 0 15px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s; }
+.card-body.open { max-height: 500px; padding: 15px; }
+.instrucao, .dica { margin-bottom: 10px; }
+.dica { background: #fff3cd; padding: 8px; border-radius: 4px; }
+.gabarito-btn { background: #007bff; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+.gabarito-code { background: #2d2d2d; color: #f8f8f2; padding: 10px; border-radius: 4px; overflow-x: auto; margin-top: 10px; white-space: pre-wrap; word-break: break-all; display: none; }
+.gabarito-code.show { display: block; }
+.footer { text-align: center; margin-top: 20px; padding: 10px; background: #333; color: white; border-radius: 8px; }
+.cta { display: none; text-align: center; margin-top: 20px; }
+.cta a { display: inline-block; background: #28a745; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="topbar">
+<h1>🛠 Aula 4 · Prática</h1>
+<div class="timer">
+<span id="timerDisplay">00:00</span>
+<button id="timerToggle">▶️</button>
+</div>
+</div>
+<div class="progress-bar">
+<div class="progress" id="progressBar"></div>
+</div>
+
+<!-- Card 1 -->
+<div class="card" data-index="0">
+<div class="card-header" onclick="toggleCard(this)">
+<input type="checkbox" onchange="updateProgress()">
+<span class="step-title">Passo 1 - Crie um sistema de notas (A, B, C)</span>
+<button class="expand-btn">▼</button>
+</div>
+<div class="card-body">
+<div class="instrucao"><strong>Instrução:</strong> Crie uma variável com uma nota de 0 a 100. Use if/else para classificar: A (>= 90), B (>= 80), C (< 80). Exiba a classificação.</div>
+<div class="dica"><strong>Dica:</strong> Use else if para verificar múltiplas condições.</div>
+<button class="gabarito-btn" onclick="toggleGabarito(this)">📖 Gabarito</button>
+<div class="gabarito-code">let nota = 85; <br>if (nota >= 90) { <br>    console.log("A"); <br>} else if (nota >= 80) { <br>    console.log("B"); <br>} else { <br>    console.log("C"); <br>}</div>
+</div>
+</div>
+
+<!-- Card 2 -->
+<div class="card" data-index="1">
+<div class="card-header" onclick="toggleCard(this)">
+<input type="checkbox" onchange="updateProgress()">
+<span class="step-title">Passo 2 - Use switch para dia da semana</span>
+<button class="expand-btn">▼</button>
+</div>
+<div class="card-body">
+<div class="instrucao"><strong>Instrução:</strong> Crie uma variável com número de 1 a 7. Use switch para exibir o nome do dia correspondente (1 = Domingo, 2 = Segunda...). Caso inválido, exiba "Dia inválido".</div>
+<div class="dica"><strong>Dica:</strong> Use case para cada número e break para interromper.</div>
+<button class="gabarito-btn" onclick="toggleGabarito(this)">📖 Gabarito</button>
+<div class="gabarito-code">let dia = 3; <br>switch(dia) { <br>  case 1: console.log("Domingo"); <br>    break; <br> case 2: console.log("Segunda"); <br>    break; <br> case 3: console.log("Terça"); <br>  break; <br> default: console.log("Dia inválido"); <br>}</div>
+</div>
+</div>
+
+<!-- Card 3 -->
+<div class="card" data-index="2">
+<div class="card-header" onclick="toggleCard(this)">
+<input type="checkbox" onchange="updateProgress()">
+<span class="step-title">Passo 3 - Resolva um problema com ternário</span>
+<button class="expand-btn">▼</button>
+</div>
+<div class="card-body">
+<div class="instrucao"><strong>Instrução:</strong> Crie uma variável com uma temperatura. Use o operador ternário para exibir "Quente" se maior que 25, ou "Frio" caso contrário.</div>
+<div class="dica"><strong>Dica:</strong> condicao ? valorSeVerdadeiro : valorSeFalso</div>
+<button class="gabarito-btn" onclick="toggleGabarito(this)">📖 Gabarito</button>
+<div class="gabarito-code">let temp = 30; <br>let clima = temp > 25 ? "Quente" : "Frio"; <br>console.log(clima);</div>
+</div>
+</div>
+
+<!-- Card 4 -->
+<div class="card" data-index="3">
+<div class="card-header" onclick="toggleCard(this)">
+<input type="checkbox" onchange="updateProgress()">
+<span class="step-title">Passo 4 - Combine if com &&</span>
+<button class="expand-btn">▼</button>
+</div>
+<div class="card-body">
+<div class="instrucao"><strong>Instrução:</strong> Crie duas variáveis: maior de idade (boolean) e tem carteira (boolean). Use if com && para verificar se a pessoa pode dirigir (maior de idade E tem carteira).</div>
+<div class="dica"><strong>Dica:</strong> && exige que TODAS as condições sejam verdadeiras.</div>
+<button class="gabarito-btn" onclick="toggleGabarito(this)">📖 Gabarito</button>
+<div class="gabarito-code">let maiorIdade = true; <br>let temCarteira = true; <br>if (maiorIdade && temCarteira) { <br> console.log("Pode dirigir"); <br>}</div>
+</div>
+</div>
+
+<!-- Card 5 -->
+<div class="card" data-index="4">
+<div class="card-header" onclick="toggleCard(this)">
+<input type="checkbox" onchange="updateProgress()">
+<span class="step-title">Passo 5 - Verifique se um número está em um intervalo</span>
+<button class="expand-btn">▼</button>
+</div>
+<div class="card-body">
+<div class="instrucao"><strong>Instrução:</strong> Crie uma variável com um número. Verifique se ele está entre 10 e 20 (inclusive). Exiba "Dentro" ou "Fora" do intervalo.</div>
+<div class="dica"><strong>Dica:</strong> Use && para verificar duas condições ao mesmo tempo.</div>
+<button class="gabarito-btn" onclick="toggleGabarito(this)">📖 Gabarito</button>
+<div class="gabarito-code">let num = 15; <br>if (num >= 10 && num <= 20) { <br> console.log("Dentro"); <br>} else { <br> console.log("Fora"); <br>}</div>
+</div>
+</div>
+
+<!-- Card 6 -->
+<div class="card" data-index="5">
+<div class="card-header" onclick="toggleCard(this)">
+<input type="checkbox" onchange="updateProgress()">
+<span class="step-title">Passo 6 - Reescreva if/else como switch</span>
+<button class="expand-btn">▼</button>
+</div>
+<div class="card-body">
+<div class="instrucao"><strong>Instrução:</strong> Você tem um if/else que verifica cores. Reescreva-o usando switch. Cores: "vermelho" → "Pare", "amarelo" → "Atenção", "verde" → "Siga".</div>
+<div class="dica"><strong>Dica:</strong> Cada case corresponde a uma cor.</div>
+<button class="gabarito-btn" onclick="toggleGabarito(this)">📖 Gabarito</button>
+<div class="gabarito-code">let cor = "verde"; <br>switch(cor) { <br>    case "vermelho": console.log("Pare"); <br>    break; <br>   case "amarelo": console.log("Atenção"); <br>    break; <br>   case "verde": console.log("Siga"); <br>    break; <br>   default: console.log("Cor inválida"); <br>}</div>
+</div>
+</div>
+
+<div class="cta" id="cta">
+<a href="04_desafio.html">➜ Seguir para o Desafio</a>
+</div>
+
+<div class="footer">
+🛠 Aula 4 · Projeto @karizeviecelli
+</div>
+
+<script>
+let timerInterval;
+let seconds = 0;
+let isRunning = false;
+
+function toggleCard(header) {
+  const body = header.nextElementSibling;
+  const btn = header.querySelector('.expand-btn');
+  const isOpen = body.classList.contains('open');
+  // Close all other cards? Not required, but accordion style: open/close each individually
+  body.classList.toggle('open');
+  btn.textContent = isOpen ? '▼' : '▲';
+}
+
+function toggleGabarito(btn) {
+  const code = btn.nextElementSibling;
+  if (code && code.classList.contains('gabarito-code')) {
+    code.classList.toggle('show');
+    btn.textContent = code.classList.contains('show') ? '📖 Ocultar Gabarito' : '📖 Gabarito';
+  }
+}
+
+function updateProgress() {
+  const checkboxes = document.querySelectorAll('.card-header input[type="checkbox"]');
+  const checked = document.querySelectorAll('.card-header input[type="checkbox"]:checked').length;
+  const total = checkboxes.length;
+  const progress = (checked / total) * 100;
+  document.getElementById('progressBar').style.width = progress + '%';
+  const cta = document.getElementById('cta');
+  if (checked === total) {
+    cta.style.display = 'block';
+  } else {
+    cta.style.display = 'none';
+  }
+}
+
+function toggleTimer() {
+  const display = document.getElementById('timerDisplay');
+  const btn = document.getElementById('timerToggle');
+  if (!isRunning) {
+    timerInterval = setInterval(() => {
+      seconds++;
+      const mins = String(Math.floor(seconds / 60)).padStart(2, '0');
+      const secs = String(seconds % 60).padStart(2, '0');
+      display.textContent = mins + ':' + secs;
+    }, 1000);
+    btn.textContent = '⏸️';
+    isRunning = true;
+  } else {
+    clearInterval(timerInterval);
+    btn.textContent = '▶️';
+    isRunning = false;
+  }
+}
+
+document.getElementById('timerToggle').addEventListener('click', toggleTimer);
+
+// Initialize progress
+updateProgress();
+</script>
+</body>
+</html>

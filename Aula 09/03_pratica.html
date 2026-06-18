@@ -57,7 +57,7 @@
           <p><strong>Instrução:</strong> Use getElementById para selecionar um elemento com id "mensagem" e altere seu texto para "Olá, DOM!".</p>
           <p><strong>Dica:</strong> document.getElementById("id").textContent = "texto";</p>
           <button class="btn-gabarito">📖 Gabarito</button>
-          <pre class="gabarito">let el = document.getElementById("mensagem"); el.textContent = "Olá, DOM!";</pre>
+          <pre class="gabarito">let el = document.getElementById("mensagem"); <br>el.textContent = "Olá, DOM!";</pre>
         </div>
       </div>
       <!-- Card 2 -->
@@ -71,7 +71,7 @@
           <p><strong>Instrução:</strong> Selecione um elemento com querySelector e adicione a classe "destaque" usando classList.add.</p>
           <p><strong>Dica:</strong> elemento.classList.add("nomeDaClasse");</p>
           <button class="btn-gabarito">📖 Gabarito</button>
-          <pre class="gabarito">let el = document.querySelector("p"); el.classList.add("destaque");</pre>
+          <pre class="gabarito">let el = document.querySelector("p"); <br>el.classList.add("destaque");</pre>
         </div>
       </div>
       <!-- Card 3 -->
@@ -85,7 +85,7 @@
           <p><strong>Instrução:</strong> Crie um botão no HTML. Ao clicar, a cor de fundo da página muda para uma cor aleatória.</p>
           <p><strong>Dica:</strong> Use addEventListener('click') e document.body.style.backgroundColor.</p>
           <button class="btn-gabarito">📖 Gabarito</button>
-          <pre class="gabarito">let btn = document.getElementById("btnCor"); btn.addEventListener("click", function() { document.body.style.backgroundColor = "lightblue"; });</pre>
+          <pre class="gabarito">let btn = document.getElementById("btnCor"); <br>btn.addEventListener("click", function() { <br>document.body.style.backgroundColor = "lightblue";<br> });</pre>
         </div>
       </div>
       <!-- Card 4 -->
@@ -99,7 +99,7 @@
           <p><strong>Instrução:</strong> Adicione um evento keydown ao documento que exiba no console a tecla pressionada.</p>
           <p><strong>Dica:</strong> document.addEventListener('keydown', function(e) { console.log(e.key); });</p>
           <button class="btn-gabarito">📖 Gabarito</button>
-          <pre class="gabarito">document.addEventListener("keydown", function(event) { console.log("Tecla: " + event.key); });</pre>
+          <pre class="gabarito">document.addEventListener("keydown", function(event) { <br>console.log("Tecla: " + event.key); <br>});</pre>
         </div>
       </div>
       <!-- Card 5 -->
@@ -113,7 +113,7 @@
           <p><strong>Instrução:</strong> Crie um input e um botão. Ao digitar um texto e clicar, o item é adicionado a uma lista (ul).</p>
           <p><strong>Dica:</strong> createElement('li'), appendChild, value do input.</p>
           <button class="btn-gabarito">📖 Gabarito</button>
-          <pre class="gabarito">let input = document.getElementById("itemInput"); let btn = document.getElementById("addBtn"); let lista = document.getElementById("lista"); btn.addEventListener("click", function() { let li = document.createElement("li"); li.textContent = input.value; lista.appendChild(li); input.value = ""; });</pre>
+          <pre class="gabarito">let input = document.getElementById("itemInput"); <br>let btn = document.getElementById("addBtn"); <br>let lista = document.getElementById("lista"); <br>btn.addEventListener("click", function() { <br>let li = document.createElement("li"); <br>li.textContent = input.value; <br>lista.appendChild(li); <br>input.value = ""; <br>});</pre>
         </div>
       </div>
       <!-- Card 6 -->
@@ -127,7 +127,7 @@
           <p><strong>Instrução:</strong> Em uma lista (ul), adicione um evento no pai que detecte qual li foi clicada e exiba seu texto.</p>
           <p><strong>Dica:</strong> Use e.target.tagName para verificar se clicou em um li.</p>
           <button class="btn-gabarito">📖 Gabarito</button>
-          <pre class="gabarito">let lista = document.getElementById("lista"); lista.addEventListener("click", function(e) { if (e.target.tagName === "LI") { console.log("Clicou em: " + e.target.textContent); } });</pre>
+          <pre class="gabarito">let lista = document.getElementById("lista"); <br>lista.addEventListener("click", function(e) { <br>if (e.target.tagName === "LI") { <br>console.log("Clicou em: " + e.target.textContent);<br> }<br> });</pre>
         </div>
       </div>
     </div>

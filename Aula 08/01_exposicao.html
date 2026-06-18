@@ -38,8 +38,8 @@
     <div class="slide active" data-index="0">
       <h2>O que são Funções?</h2>
       <p>Funções são blocos de código reutilizáveis. Assim como uma máquina que recebe entrada e produz saída, uma função recebe dados (parâmetros), processa e retorna um resultado.</p>
-      <div class="code-block">function somar(a, b) {
-  return a + b;
+      <div class="code-block">function somar(a, b) {<br>
+  return a + b;<br>
 }
 console.log(somar(3, 5)); // 8</div>
     </div>
@@ -47,55 +47,55 @@ console.log(somar(3, 5)); // 8</div>
       <h2>Declaração de função</h2>
       <p>Declaramos funções com a palavra-chave <code>function</code>. Ela pode ser chamada pelo nome quantas vezes quisermos. Isso evita repetir código.</p>
       <div class="code-block">function saudacao() {
-  console.log("Olá!");
+  <br>console.log("Olá!");
 }
-saudacao();
+<br>
 saudacao();</div>
     </div>
     <div class="slide" data-index="2">
       <h2>Parâmetros e argumentos</h2>
       <p>Parâmetros são variáveis que a função recebe. Argumentos são os valores passados ao chamar a função.</p>
       <div class="code-block">function dobro(x) {
-  return x * 2;
-}
-console.log(dobro(5)); // 10</div>
+  <br>return x * 2;
+<br>}
+<br>console.log(dobro(5)); // 10</div>
     </div>
     <div class="slide" data-index="3">
       <h2>Retorno com return</h2>
       <p><code>return</code> devolve um valor da função. Sem return, a função retorna <code>undefined</code>. O return também encerra a execução da função.</p>
-      <div class="code-block">function quadrado(n) {
+      <div class="code-block">function quadrado(n) {<br>
   return n * n;
-}
-let resultado = quadrado(4); // 16</div>
+<br>}
+<br>let resultado = quadrado(4); // 16</div>
     </div>
     <div class="slide" data-index="4">
       <h2>Escopo em funções</h2>
       <p>Variáveis declaradas dentro de funções (com <code>let</code>/<code>const</code>) só existem lá dentro - escopo local. Variáveis fora são globais.</p>
       <div class="code-block">let global = "OK";
 function teste() {
-  let local = "interno";
-  console.log(global); // OK
+  <br>let local = "interno";
+  <br>console.log(global); // OK
 }</div>
     </div>
     <div class="slide" data-index="5">
       <h2>Arrow functions</h2>
       <p>Arrow functions são uma forma mais curta de escrever funções: <code>() => { }</code>. Se só tem uma linha, pode omitir {} e return.</p>
       <div class="code-block">let dobro = (x) => x * 2;
-console.log(dobro(5)); // 10</div>
+<br>console.log(dobro(5)); // 10</div>
     </div>
     <div class="slide" data-index="6">
       <h2>Funções como argumento (callbacks)</h2>
       <p>Callbacks são funções passadas como argumento para outra função. São muito usadas em arrays (filter, map, forEach).</p>
       <div class="code-block">let nums = [1, 2, 3];
-nums.forEach(function(n) {
-  console.log(n);
-});</div>
+<br>nums.forEach(function(n) {
+  <br>console.log(n);
+}<br>);</div>
     </div>
     <div class="slide" data-index="7">
       <h2>Parâmetros rest e default</h2>
       <p>Parâmetro default define valor padrão caso nenhum argumento seja passado. Parâmetro rest (<code>...args</code>) agrupa múltiplos argumentos em um array.</p>
       <div class="code-block">function somar(...nums) {
-  return nums.reduce((a, b) => a + b);
+ <br>return nums.reduce((a, b) => a + b);<br>
 }
 console.log(somar(1, 2, 3)); // 6</div>
       <a href="02_demo.html" class="cta-btn">➜ Seguir para a Demonstração</a>

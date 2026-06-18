@@ -61,9 +61,9 @@
         </div>
         <div class="card-content">
           <div class="instruction"><strong>Instrução:</strong> Crie uma função chamada <code>somar</code> que receba dois parâmetros (a, b) e retorne a soma deles. Chame a função com 5 e 3.</div>
-          <div class="hint"><strong>Dica:</strong> Use <code>function nome(a, b) { return a + b; }</code></div>
+          <div class="hint"><strong>Dica:</strong> Use <code>function nome(a, b) { <br>return a + b; }</code></div>
           <button class="btn-gabarito" onclick="showGabarito(this)">📖 Gabarito</button>
-          <div class="gabarito">function somar(a, b) { return a + b; } let resultado = somar(5, 3); console.log(resultado);</div>
+          <div class="gabarito">function somar(a, b) { <br>return a + b; <br>} <br>let resultado = somar(5, 3); <br>console.log(resultado);</div>
         </div>
       </div>
 
@@ -78,7 +78,7 @@
           <div class="instruction"><strong>Instrução:</strong> Crie uma função <code>isPositivo</code> que receba um número e retorne <code>true</code> se for maior que 0, ou <code>false</code> caso contrário.</div>
           <div class="hint"><strong>Dica:</strong> Use <code>return n > 0</code> para comparar.</div>
           <button class="btn-gabarito" onclick="showGabarito(this)">📖 Gabarito</button>
-          <div class="gabarito">function isPositivo(n) { return n > 0; } console.log(isPositivo(10)); console.log(isPositivo(-3));</div>
+          <div class="gabarito">function isPositivo(n) { <br>return n > 0; <br>} <br>console.log(isPositivo(10)); <br>console.log(isPositivo(-3));</div>
         </div>
       </div>
 
@@ -93,7 +93,7 @@
           <div class="instruction"><strong>Instrução:</strong> Crie uma arrow function que receba dois números e retorne a multiplicação deles. Armazene em uma variável chamada <code>multiplicar</code>.</div>
           <div class="hint"><strong>Dica:</strong> <code>let multiplicar = (a, b) => a * b;</code></div>
           <button class="btn-gabarito" onclick="showGabarito(this)">📖 Gabarito</button>
-          <div class="gabarito">let multiplicar = (a, b) => a * b; console.log(multiplicar(4, 3));</div>
+          <div class="gabarito">let multiplicar = (a, b) => a * b; <br>console.log(multiplicar(4, 3));</div>
         </div>
       </div>
 
@@ -108,7 +108,7 @@
           <div class="instruction"><strong>Instrução:</strong> Crie um array de números e use <code>filter()</code> com uma função callback para selecionar os maiores que 3.</div>
           <div class="hint"><strong>Dica:</strong> <code>filter</code> recebe uma função que retorna <code>true</code>/<code>false</code>.</div>
           <button class="btn-gabarito" onclick="showGabarito(this)">📖 Gabarito</button>
-          <div class="gabarito">let nums = [1, 2, 3, 4, 5]; let maiores = nums.filter(function(n) { return n > 3; }); console.log(maiores);</div>
+          <div class="gabarito">let nums = [1, 2, 3, 4, 5]; <br> let maiores = nums.filter(function(n) { <br>return n > 3; <br>}); <br>console.log(maiores);</div>
         </div>
       </div>
 
@@ -123,7 +123,7 @@
           <div class="instruction"><strong>Instrução:</strong> Crie uma função <code>cumprimentar</code> que receba um nome e exiba "Olá, [nome]!". Se nenhum nome for passado, use "Visitante" como padrão.</div>
           <div class="hint"><strong>Dica:</strong> <code>function cumprimentar(nome = "Visitante") { }</code></div>
           <button class="btn-gabarito" onclick="showGabarito(this)">📖 Gabarito</button>
-          <div class="gabarito">function cumprimentar(nome = "Visitante") { console.log("Olá, " + nome + "!"); } cumprimentar("Ana"); cumprimentar();</div>
+          <div class="gabarito">function cumprimentar(nome = "Visitante") { <br>console.log("Olá, " + nome + "!"); <br>} <br>cumprimentar("Ana"); <br>cumprimentar();</div>
         </div>
       </div>
 
@@ -138,7 +138,7 @@
           <div class="instruction"><strong>Instrução:</strong> Crie duas funções: <code>quadrado(n)</code> e <code>somaQuadrados(a, b)</code>. <code>somaQuadrados</code> deve chamar <code>quadrado</code> internamente.</div>
           <div class="hint"><strong>Dica:</strong> Uma função chama a outra pelo nome.</div>
           <button class="btn-gabarito" onclick="showGabarito(this)">📖 Gabarito</button>
-          <div class="gabarito">function quadrado(n) { return n * n; } function somaQuadrados(a, b) { return quadrado(a) + quadrado(b); } console.log(somaQuadrados(3, 4));</div>
+          <div class="gabarito">function quadrado(n) { <br>return n * n; <br>}<br> function somaQuadrados(a, b) {<br> return quadrado(a) + quadrado(b); <br>} <br>console.log(somaQuadrados(3, 4));</div>
         </div>
       </div>
     </div>

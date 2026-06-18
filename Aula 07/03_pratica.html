@@ -70,7 +70,7 @@
                 title: 'Passo 2 - "Adicione um método que cumprimente"',
                 instruction: 'Adicione ao objeto pessoa um método chamado saudacao que exiba "Olá, meu nome é [nome]".',
                 tip: 'Use function() e this para acessar a própria propriedade.',
-                code: 'let pessoa = { nome: "João", saudacao: function() { console.log("Olá, meu nome é " + this.nome); } };\npessoa.saudacao();'
+                code: 'let pessoa = { nome: "João", saudacao: function() \n     { console.log("Olá, meu nome é " + this.nome); \n  } \n};\npessoa.saudacao();'
             },
             {
                 title: 'Passo 3 - "Acesse propriedades com colchetes"',
@@ -82,7 +82,7 @@
                 title: 'Passo 4 - "Itere sobre o objeto com for...in"',
                 instruction: 'Crie um objeto carro com marca, ano e cor. Use for...in para exibir todas as chaves e valores.',
                 tip: 'for (let chave in objeto) { objeto[chave] }',
-                code: 'let carro = { marca: "Toyota", ano: 2022, cor: "preto" };\nfor (let chave in carro) { console.log(chave + ": " + carro[chave]); }'
+                code: 'let carro = { marca: "Toyota", ano: 2022, cor: "preto" };\n  for (let chave in carro) { \n       console.log(chave + ": " + carro[chave]); }'
             },
             {
                 title: 'Passo 5 - "Converta objeto para JSON"',

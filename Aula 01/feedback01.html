@@ -112,7 +112,7 @@ function render() {
     let starsHtml = '';
     for (let i = 1; i <= 5; i++) {
       const filled = student.estrelas >= i ? 'filled' : '';
-      starsHtml += `<span class="star" data-index="${i}">${filled}</span>`;
+      starsHtml += `<span class="star ${filled}" data-index="${i}">★</span>`;
     }
     let criteriosHtml = '';
     const criterios = ['Usou console.log corretamente','Criou mensagens com strings','Utilizou números nas mensagens','Código executa sem erros','Seguiu sequência lógica'];

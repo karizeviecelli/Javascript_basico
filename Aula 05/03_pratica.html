@@ -159,37 +159,37 @@
                 title: "Passo 1 - Imprima números de 1 a 10 com for",
                 instruction: "Use o laço for para exibir os números de 1 a 10 no console.",
                 dica: "<code>for (let i = 1; i <= 10; i++) { }</code>",
-                gabarito: "for (let i = 1; i <= 10; i++) { console.log(i); }"
+                gabarito: "for (let i = 1; i <= 10; i++) {  \nconsole.log(i); \n}"
             },
             {
                 title: "Passo 2 - Escreva while que soma até 100",
                 instruction: "Use while para somar números de 1 até 100. Exiba o resultado final (que deve ser 5050).",
                 dica: "Acumule os valores em uma variável soma.",
-                gabarito: "let soma = 0; let i = 1; while (i <= 100) { soma += i; i++; } console.log(soma);"
+                gabarito: "let soma = 0; \nlet i = 1; \nwhile (i <= 100) { \n   soma += i; \n   i++; \n } \nconsole.log(soma);"
             },
             {
                 title: "Passo 3 - Use do...while para ler entrada",
                 instruction: "Simule um programa que pede uma senha e repete enquanto a senha estiver errada. Use do...while.",
                 dica: "<code>do { } while (senha !== \"1234\");</code>",
-                gabarito: "let senha; do { senha = \"1234\"; } while (senha !== \"1234\"); console.log(\"Acesso liberado\");"
+                gabarito: "let senha; \ndo { \n senha = \"1234\"; \n} while (senha !== \"1234\"); \nconsole.log(\"Acesso liberado\");"
             },
             {
                 title: "Passo 4 - Pare um loop com break",
                 instruction: "Crie um for de 1 a 10 mas pare (break) quando chegar no 5. Exiba apenas 1, 2, 3, 4.",
                 dica: "<code>if (i === 5) break;</code>",
-                gabarito: "for (let i = 1; i <= 10; i++) { if (i === 5) break; console.log(i); }"
+                gabarito: "for (let i = 1; i <= 10; i++) { \n   if (i === 5) \n     break; \n   console.log(i);\n}"
             },
             {
                 title: "Passo 5 - Pule um número com continue",
                 instruction: "Crie um for de 1 a 5 que pule (continue) o número 3. Exiba: 1, 2, 4, 5.",
                 dica: "<code>if (i === 3) continue;</code>",
-                gabarito: "for (let i = 1; i <= 5; i++) { if (i === 3) continue; console.log(i); }"
+                gabarito: "for (let i = 1; i <= 5; i++) { \n   if (i === 3) continue; \nconsole.log(i); \n}"
             },
             {
                 title: "Passo 6 - Crie uma tabuada com laço aninhado",
                 instruction: "Use dois for aninhados para criar a tabuada do 1 até o 3 (1x1 até 3x3).",
                 dica: "for externo = multiplicando, for interno = multiplicador.",
-                gabarito: "for (let i = 1; i <= 3; i++) { for (let j = 1; j <= 3; j++) { console.log(i + \" x \" + j + \" = \" + (i * j)); } }"
+                gabarito: "for (let i = 1; i <= 3; i++) { \n    for (let j = 1; j <= 3; j++) { \n       console.log(i + \" x \" + j + \" = \" + (i * j)); \n    } \n}"
             }
         ];
 
