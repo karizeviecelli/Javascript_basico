@@ -899,7 +899,7 @@ Nome: João | Idade: 20 | Curso: Administração [Excluir]
 
 ---
 
-## 21. Sugestão de avaliação
+## 21. Avaliação
 
 A atividade pode ser avaliada considerando:
 
