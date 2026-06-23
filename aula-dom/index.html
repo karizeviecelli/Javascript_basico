@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aula de DOM</title>
+</head>
+
+<body>
+    <h1 id="titulo">Minha primeira página com DOM</h1>
+    <button onclick="alterarTitulo()">Clique aqui</button>
+    <script>
+        function alterarTitulo() {
+            document.getElementById("titulo").innerText = "Título alterado com JavaScript!";
+        }
+    </script>
+
+    <button onclick="mostrarMensagem()">Clique aqui</button>
+
+    <input type="text" id="nome" placeholder="digite seu nome">
+    <button onclick="mostrarNome()">Mostrar nome</button>
+    <p id="resultado"></p>
+
+    <h1>Verificador de idade</h1>
+
+    <input type="number" id="idade" placeholder="Digite sua idade">
+    <button onclick="verificarIdade()">Verificar</button>
+
+    <p id="resultado1"></p>
+    <img id="imagem" src="img/imagem1.jpg" width="250">
+    <button onclick="trocarImagem()">Trocar imagem</button>
+
+    <p id="texto">mensageeeeem </p>
+    <button onclick="esconderTexto()">Esconder</button>
+    <button onclick="mostrarTexto()">Mostrar</button>
+
+    <div id="area"></div>
+    <button onclick="criarParagrafo()">Criar parágrafo</button>
+
+    <p id="aviso">Este texto será removido.</p>
+    <button onclick="removerAviso()">Remover</button> 
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
