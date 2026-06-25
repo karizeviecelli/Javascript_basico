@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121214;
+    color: #e1e1e6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid #29292e;
+    margin: 30px 0;
+}
+
+/* Formulário */
+.formulario {
+    background-color: #202024;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.campo label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #04d361;
+}
+
+.campo input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #29292e;
+    background-color: #121214;
+    color: #fff;
+    font-size: 16px;
+}
+
+.campo input:focus {
+    outline: 1px solid #04d361;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #04d361;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #06b956;
+}
+
+/* Container de Cards */
+.lista-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Card Individual */
+.card-filme {
+    background-color: #202024;
+    color: #e1e1e6;
+    border-left: 5px solid #04d361;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-filme p {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* Botão Excluir dentro do Card */
+.btn-excluir {
+    background-color: #f75a68;
+    color: #fff;
+    width: auto;
+    padding: 6px 12px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.btn-excluir:hover {
+    background-color: #c53e4c;
+}
