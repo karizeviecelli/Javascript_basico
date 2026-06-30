@@ -3,7 +3,6 @@
 **Carga horária:** 4 horas  
 **Público-alvo:** alunos iniciantes/intermediários em HTML, CSS e JavaScript  
 **Formato:** aula prática com demonstração, laboratório e pesquisa orientada  
-**Persona da atividade:** Desenvolvedor(a) Front-end Júnior em uma software house  
 
 ---
 
