@@ -76,7 +76,7 @@ index.html
 |_ css
   |_style.css
 |_ js
-    |_script.js
+  |_script.js
 ```
 
 ---
